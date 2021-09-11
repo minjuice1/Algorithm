@@ -9,7 +9,6 @@ let input = fs.readFileSync('/dev/stdin').toString().split(' ');
 let A = parseInt(input[0]);
 let B = parseInt(input[1]);
 let C = parseInt(input[2]);
-
 //let A = Number(input[0]);
 //let B = Number(input[1]);
 //let C = Number(input[2]);
