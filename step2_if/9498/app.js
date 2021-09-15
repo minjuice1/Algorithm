@@ -19,4 +19,4 @@ function solution(A) {
   } else {
     console.log('F')
   }
-}
+} 
