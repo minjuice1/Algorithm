@@ -1,14 +1,13 @@
-// 각 테스트 케이스마다 A+B를 출력한다.
-// 예제 입력 : 1 1 , 2 3 , 3 4 , 9 8 , 5 2 , 0 0
-// 예제 출력 : 2, 5, 7, 17, 7
+const fs = require('fs');
+const file = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
+let input = fs.readFileSync(file).toString().split('\n');
+// console.log(input); // [ '1 1\r', '2 3\r', '3 4\r', '9 8\r', '5 2\r', '0 0' ]
+// console.log(input[1]); // 2 3  (공백까지 포함)
+// console.log(input[1][2]); // 3
+// console.log(input[0][0]);
+while (input[0][0] != 0) {
+  const num = input.shift().split(" ");
 
-let fs = require('fs');
-let input = fs.readFileSync('./input.txt').toString().split('\n');
-console.log(input);
-
-let a = Number(input[0]);
-console.log(a);
-let b = Number(input[1]);
-console.log(b);
-
-
+  console.log(Number(num[0]) + (Number(num[1])));
+  // console.log(+num[0] + +num[1]);
+}
