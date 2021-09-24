@@ -27,5 +27,5 @@ while(trueOrfalse) {
         console.log(count);
         trueOrfalse = false;
     }
-  }
+}
 
