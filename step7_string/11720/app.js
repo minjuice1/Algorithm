@@ -1,6 +1,8 @@
-let input = require('fs').readFileSync('/dev/stdin').toString().split('\n');
+const fs = require('fs');
+const file = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
+let input = fs.readFileSync(file).toString().split('\n');
 
-let num1 = Number(input[0]);
+let num = Number(input[0]);
 let num2 = input[1].split("");
 let sum = 0;
 
