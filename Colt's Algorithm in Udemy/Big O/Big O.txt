@@ -1,0 +1,38 @@
+Objectives
+1. Motivate the need for something like Big O Notation
+    Big O Notation과 같은 것에 대한 동기 부여
+2. Describe what Big O Notation is / Big O 표기법이 무엇인지 설명
+3. Simplify Big O Expressions / Big O 표현식 단순화
+4. Define "time complexity" and "space complexity" / "시간 복잡도"와 "공간 복잡도" 정의
+5. Evaluate the time complexity and
+    space complexity of different algorithms usgin Big O Notation
+    시간 복잡도를 평가하고 Big O 표기법을 사용하는 다른 알고리즘의 공간 복잡도
+6. Describe what a logarithm is / 로그가 무엇인지 설명
+
+Big O Shorthands
+1. ARithmetic operations are constant / AR 산술 연산은 일정하다.
+2. Variable assignment is constant / 변수 할당은 일정하다.
+3. Accessing elements in an array (by index) or object (by key) is constant.
+    배열의 요소(인덱스 기준) 또는 객체(키 기준)에 액세스하는 것은 상수.
+4. In a loop, the the complexity is the length of the loop times the complexity
+    of whatever happens inside of the loop
+    루프에서 복잡성은 루프의 길이에 루프 내부에서 발생하는 모든 것의 복잡성을 곱한 것.
+
+Space Complexity in JS
+Rules of Thumb
+1. Most primitives (booleans, numbers, undefined, null) are constant space
+    대부분의 프리미티브(부울, 숫자, 정의되지 않음, 널)는 상수 공간이다.
+2. Strings require O(n) space (where n is the string length)
+    문자열에는 O(n) 공간이 필요 (n은 문자열 길이)
+3. Reference types are generally O(n), where n is the length (for arrays) or
+    the number of keys (for objects)
+    참조 유형은 일반적으로 O(n)이며, 여기서 n은 길이(배열의 경우) 또는 키의 수(객체의 경우)
+
+객체와 배열의 차이점
+1. 객체는 거의 모든 것에 있어서 더 빠르지만 순서가 없다.
+2. 배열은 순서가 필요할 때는 좋지만 끝 부분에서 삽입과 제거를 하는 것이 좋으며
+    시작 부분에서 삽입과 제거를 하는 것은 피하는 것이 좋다.
+    왜냐하면 누적효과를 일으켜서 모든 요소들이 뒤로 밀려, 다시 인덱스를 부여받아야 하기 때문.
+    가운데 부분에서 삽입하거나 제거하는 것도 마찬가지.
+    또 다시 누적효과가 발생해서, 추가하거나 제거한 요소 뒤로 연쇄적인 인덱스 재부여가 발생해야 하기 때문.
+    
