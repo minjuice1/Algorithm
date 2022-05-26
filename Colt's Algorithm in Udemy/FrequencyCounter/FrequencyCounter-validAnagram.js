@@ -7,13 +7,15 @@ function validAnagram(arr1, arr2) {
   if(arr1 === '' && arr2 === '') return true
   
   for(let i = 0; i < arr1.length; i++) {
-    alpha1[index1++] = arr1[i]
+    alpha1.push(arr1[i])
   }
   for(let i = 0; i < arr2.length; i++) {
-    alpha2[index2++] = arr2[i]
+    alpha2.push(arr2[i])
   }
-  alpha1.sort((a, b) => a - b);
-  alpha2.sort((a, b) => a - b);
+  let result
+  result = alpha2.sort((a, b) => a - b);
+  console.log(result)
+  
   for(let i = 0; i < arr1.length; i++) {
     if(alpha1[i] !== alpha2[i]) {
       return false
@@ -22,7 +24,4 @@ function validAnagram(arr1, arr2) {
   return true;
 }
 
-validAnagram('', '')
 validAnagram('aaz', 'zza')
-validAnagram('anagram', 'nagaram')
-validAnagram('qwerty', 'qeywrt')
